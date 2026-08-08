@@ -1,0 +1,26 @@
+﻿# Виртуальное окружение
+venv/
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# Playwright отчёты и результаты
+test-results/
+playwright-report/
+.pytest_cache/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Старые учебные файлы (не для портфолио)
+Automation*.py
+
+# Картинки и скриншоты (учебные)
+*.png
+*.jpg
+*.jpeg
+
+# Старые учебные файлы без расширения
+Automation*
