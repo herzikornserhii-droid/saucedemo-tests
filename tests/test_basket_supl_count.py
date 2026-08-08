@@ -1,8 +1,13 @@
+from pages.login_page import LoginPage
+from pages.inventory_page import InventoryPage
+
+
 def test_add_to_cart(page):
-    page.goto("https://www.saucedemo.com")
-    page.fill("#user-name", "standard_user")
-    page.fill("#password", "secret_sauce")
-    page.click("#login-button")
-    page.click("[data-test='add-to-cart-sauce-labs-backpack']")
-    badge = page.locator("[data-test='shopping-cart-badge']")
-    assert badge.inner_text() == "1"
+    login_page = LoginPage(page)
+    login_page.open()
+    login_page.login("standard_user", "secret_sauce")
+
+    inventory_page = InventoryPage(page)
+    inventory_page.add_backpack_to_cart()
+
+    assert inventory_page.get_cart_count() == "1"
