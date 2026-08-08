@@ -1,6 +1,8 @@
+from pages.login_page import LoginPage
+
+
 def test_login(page):
-    page.goto("https://www.saucedemo.com")
-    page.fill("#user-name", "standard_user")
-    page.fill("#password", "secret_sauce")
-    page.click("#login-button")
+    login_page = LoginPage(page)
+    login_page.open()
+    login_page.login("standard_user", "secret_sauce")
     assert page.url == "https://www.saucedemo.com/inventory.html"
