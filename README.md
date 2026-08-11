@@ -1,3 +1,5 @@
+![Tests](https://github.com/herzikornserhii-droid/saucedemo-tests/actions/workflows/tests.yml/badge.svg)
+
 # SauceDemo E2E Tests
 
 Automated end-to-end tests for [saucedemo.com](https://www.saucedemo.com) built with Python, Playwright, and pytest.
