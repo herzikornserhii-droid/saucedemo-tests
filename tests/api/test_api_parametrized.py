@@ -19,4 +19,4 @@ def test_get_user_exists(user_id, expected_status):
         f"https://reqres.in/api/users/{user_id}",
         headers=headers
     )
-    assert response.status_code == expected_status
+    assert response.status_code == expected_status 
